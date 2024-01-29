@@ -19,4 +19,4 @@ const connectSchema = mongoose.Schema({
     timestamps: true,
 });
 
-module.exports = mongoose.model('Contact', connectSchema)
+module.exports = mongoose.model('Contact', connectSchema);
