@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 
 const connectSchema = mongoose.Schema({
+    user_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: "User",
+    },
+
     name: {
         type: String,
         required: [true, 'please add the contact name'],
@@ -19,4 +25,4 @@ const connectSchema = mongoose.Schema({
     timestamps: true,
 });
 
-module.exports = mongoose.model('Contact', connectSchema)
+module.exports = mongoose.model('Contact', connectSchema);
